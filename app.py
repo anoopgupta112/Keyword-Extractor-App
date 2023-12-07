@@ -4,17 +4,15 @@ import re
 import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import stopwords
-
+nltk.download('stopwords')
 app = Flask(__name__)
 
-# Load pickled files & data
-with open('count_vectorizer.pkl', 'rb') as f:
-    cv = pickle.load(f)
 
-with open('tfidf_transformer.pkl', 'rb') as f:
+
+with open('./models/tfidf_transformer.pkl', 'rb') as f:
     tfidf_transformer = pickle.load(f)
 
-with open('feature_names.pkl', 'rb') as f:
+with open('./models/feature_names.pkl', 'rb') as f:
     feature_names = pickle.load(f)
 
 # Cleaning data:
@@ -97,4 +95,4 @@ def search_keywords():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
