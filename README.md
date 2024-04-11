@@ -22,7 +22,7 @@ Below are screenshots showcasing different pages and functionalities of the appl
 ## Getting Started
 To run the application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/Keyword-Extractor-App.git`
+1. Clone the repository: `git clone https://github.com/anoopgupta112/Keyword-Extractor-App.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the application: `python app.py`
 
